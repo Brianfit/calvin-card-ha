@@ -17,13 +17,19 @@ class CALVINcard extends HTMLElement {
                 </ha-card>`;
             this.content = this.querySelector('#content');
         }
-        const imageUrl = `/local/community/calvin-card-ha/calvin.png?_ts=${new Date().getTime()}`;
-        console.log('Yes, Hobbes...')
-        this.content.innerHTML = `<br /><img src="${imageUrl}" style="width: 100%;"><br />`;
+
+        // Store the last update timestamp
+        if (!this.lastUpdate || (Date.now() - this.lastUpdate) > 3 * 60 * 60 * 1000) { // 3 hours in milliseconds
+            this.lastUpdate = Date.now(); // Update the timestamp
+            this.imageUrl = `/local/community/calvin-card-ha/calvin.png?_ts=${this.lastUpdate}`;
+        }
+
+        console.log('Yes, Hobbes...');
+        this.content.innerHTML = `<br /><img src="${this.imageUrl}" style="width: 100%;"><br />`;
     }
 
     getCardSize() {
-        return 12;
+        return ;
     }
 }
 
