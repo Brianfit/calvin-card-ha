@@ -1,15 +1,22 @@
-# calvin-card [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 25 px !important;width: 100px !important;" ></a>
+# calvin-card [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:25px" !important;width:"100px" !important;" ></a>
 
 A HACS routine which pulls the a different Calvin and Hobbes comic into your Home Assistant dashboard. 
 
 "Why can't I just grab the image in a picture entity from the RSS feed" you ask?  Because browsers cache images, Spaceman Spiff. It's normally a feature, but when you want to point to a file that gets refreshed regularly, it's a bug. We need to trick the browser into thinking it hasn't seen the url it's fetching the comic from, and we do that with this nifty trick, built right into the card:
 
-        const imageUrl = `/local/calvin-card/calvin.png?_ts=${new Date().getTime()}`;
+        const imageUrl = `/local/calvin-card-had/calvin.png?_ts=${new Date().getTime()}`;
         this.content.innerHTML = `<img src="${imageUrl}" style="width: 100%;">`;
 
 Get it? If not, it doesn't matter. Just think of it as the magic spell that the card is chanting in the middle of the night to summon your next dose of nerdy goodness. 
 
 ## Installation
+
+Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS your Home Assistant. Click on the the three dots in the upper right. Click "Custom Repository" and paste the url into the url box. Choose "Lovelace" as the category. Download the card files with the "Download" button lower right and voila! You can now add a Calvin Card to your dashboard (you'll find it all the way at the bottom of the card choices behind the + sign.) You probably want to add the following code or similar to make it look good in your setup: 
+
+`grid_options:
+  columns: 24
+  rows: 6
+aspect_ratio: 32%`
 
 > [!IMPORTANT]
 > <strong> If you just install the card, you'll only see the default comic. Every day. I mean it's a good one, but if you want to see it refresh, you need to create an automation! </strong>
