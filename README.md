@@ -27,8 +27,10 @@ Good news is it's easy. When the card installs, it creates a file called calvin.
 
 You'll want to run that every 24 hours to get the latest comic. First, open up your configuration.yaml and add the following code:
 
-        `shell_command:
-           run_calvin: "sh /local/calvin-card/calvin.sh"`
+```
+shell_command:
+   run_calvin: "sh /local/calvin-card/calvin.sh"
+```
           
 NB: Copy that into your configuration.yaml without the backticks.            
 
