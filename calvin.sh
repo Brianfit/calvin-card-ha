@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SAVE_DIR="config/www/community/calvin-card-ha/"
+SAVE_DIR="/config/www/community/calvin-card-ha/"
 RSS_URL="https://www.comicsrss.com/rss/calvinandhobbes.rss"
 IMAGE_FILE="${SAVE_DIR}calvin.png"
 JSON_FILE="${SAVE_DIR}calvin_data.json"
