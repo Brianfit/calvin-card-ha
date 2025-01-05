@@ -1,6 +1,6 @@
 # calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:25px!important; width:100px!important;" ></a>
 
-A HACS routine which pulls the a different Calvin and Hobbes comic into your Home Assistant dashboard. 
+A HACS routine which pulls a different Calvin and Hobbes comic into your Home Assistant dashboard every day. 
 
 "Why can't I just grab the image in a picture entity from the RSS feed" you ask?  Because browsers cache images, Spaceman Spiff. It's normally a feature, but when you want to point to a file that gets refreshed regularly, it's a bug. We need to trick the browser into thinking it hasn't seen the url it's fetching the comic from, and we do that with this nifty trick, built right into the card:
 
