@@ -13,10 +13,12 @@ Get it? If not, it doesn't matter. Just think of it as the magic spell that the 
 
 Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS your Home Assistant. Click on the the three dots in the upper right. Click "Custom Repository" and paste the url into the url box. Choose "Lovelace" as the category. Download the card files with the "Download" button lower right and voila! You can now add a Calvin Card to your dashboard (you'll find it all the way at the bottom of the card choices behind the + sign.) You probably want to add the following code or similar to make it look good in your setup: 
 
-```grid_options:
+```
+grid_options:
   columns: 24
   rows: 6
-aspect_ratio: 32%```
+aspect_ratio: 32%
+```
 
 > [!IMPORTANT]
 > <strong> If you just install the card, you'll only see the default comic. Every day. I mean it's a good one, but if you want to see it refresh, you need to create an automation! </strong>
