@@ -29,7 +29,7 @@ You'll want to run that every 24 hours to get the latest comic. First, open up y
 
 ```
 shell_command:
-   run_calvin: "sh /local/calvin-card/calvin.sh"
+   run_calvin: "sh /local/calvin-card-ha/calvin.sh"
 ```
           
 NB: Copy that into your configuration.yaml without the backticks.            
