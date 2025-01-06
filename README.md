@@ -31,8 +31,7 @@ You'll want to run that every 24 hours to get the latest comic. First, open up y
 shell_command:
    run_calvin: "sh /local/calvin-card-ha/calvin.sh"
 ```
-          
-NB: Copy that into your configuration.yaml without the backticks.            
+                 
 
 The file is actually in your /config/www directory, but in a normal install that's read by Home Assitant from the alias /local/
 
