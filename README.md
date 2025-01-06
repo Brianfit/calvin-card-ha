@@ -74,7 +74,7 @@ Thanks also to u/lau1406 and the guys and gals in <a href="https://www.reddit.co
 <img src="https://bob.bigw.org/ch/quote.jpg" alt="Charlie Brown and Snoopy approve." height="55%" width="55%">
 </p>
 This card was made by Brian Fitzgerald under a Creative Commons BY-NC license. You are free to use or modify the code under two conditions: you don't sell it and you mention I made it. 
-This card delivers content made by Randall Munroe under the same conditions. 
+This card delivers content made by Bill Watterson. 
 
 [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
