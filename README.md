@@ -33,8 +33,6 @@ shell_command:
 ```
 
 
-The file is actually in your /config/www directory, but in a normal install that's read by Home Assitant from the alias /local/
-
 > [!IMPORTANT]
 > Go to the Developers menu, click on "Check Configuration" and "Restart Home Assistant" (Really restart it, don't just reload the YAML. You're creating a new entity, and you won't have access to it until you restart Home Assistant.)
 
