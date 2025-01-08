@@ -20,16 +20,25 @@ class CALVINcard extends HTMLElement {
             this.content.appendChild(this.imageElement);
         }
 
+        // Debounce the image update to avoid flickering
+        this.updateImage();
+    }
+
+    updateImage() {
         const currentDate = new Date().getDate();
 
         // Check if the current date is different from the last fetch date or if it's the first run
         if (this.lastFetchDate !== currentDate) {
             this.lastFetchDate = currentDate; // Update the last fetch date
-            this.imageUrl = `/local/community/calvin-card-ha/calvin.png?_ts=${currentDate}`;
-            this.imageElement.src = this.imageUrl;
-            console.log('Image updated:', this.imageUrl);
-        } else {
-            console.log('Image not updated; using existing URL.');
+            const imageUrl = `/local/community/calvin-card-ha/calvin.png?_ts=${currentDate}`;
+            
+            // Don't set the source unless the image URL has changed. Flicker suspect?
+            if (this.imageElement.src !== imageUrl) {
+                this.imageElement.src = imageUrl;
+                console.log('Image updated:', imageUrl);
+            } else {
+                console.log('Image not updated; using existing URL. (Debounced)');
+            }
         }
     }
 
