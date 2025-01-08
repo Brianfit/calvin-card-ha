@@ -29,9 +29,9 @@ You'll want to run that every 24 hours to get the latest comic. First, open up y
 
 ```
 shell_command:
-   run_calvin: "sh /local/community/calvin-card-ha/calvin.sh"
+   run_calvin: "sh /config/www/community/calvin-card-ha/calvin.sh"
 ```
-                 
+
 
 The file is actually in your /config/www directory, but in a normal install that's read by Home Assitant from the alias /local/
 
