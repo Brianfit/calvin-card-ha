@@ -1,0 +1,16 @@
+{
+  "name": "Calvin Card",
+  "content_in_root": true,
+  "filename": "calvin-card.js",
+  "resources": [
+    {
+      "type": "module",
+      "url": "/hacsfiles/calvin-card-ha/calvin-card.js"
+    }
+  ],
+  "additional_files": [
+    "calvin.png",
+    "calvin.sh",
+    "calvin_data.json"
+  ]
+}
