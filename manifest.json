@@ -7,10 +7,5 @@
       "type": "module",
       "url": "/hacsfiles/calvin-card-ha/calvin-card.js"
     }
-  ],
-  "additional_files": [
-    "calvin.png",
-    "calvin.sh",
-    "calvin_data.json"
   ]
 }
