@@ -4,14 +4,19 @@ A HACS routine which pulls a different Calvin and Hobbes comic into your Home As
 
 "Why can't I just grab the image in a picture entity from the RSS feed" you ask?  Because browsers cache images, Spaceman Spiff. It's normally a feature, but when you want to point to a file that gets refreshed regularly, it's a bug. We need to trick the browser into thinking it hasn't seen the url it's fetching the comic from, and we do that with this nifty trick, built right into the card:
 
-        const imageUrl = `/local/calvin-card-had/calvin.png?_ts=${new Date().getTime()}`;
+        const imageUrl = `/local/calvin-card-had/calvin.png?_ts=${new Date()}`;
         this.content.innerHTML = `<img src="${imageUrl}" style="width: 100%;">`;
 
-Get it? If not, it doesn't matter. Just think of it as the magic spell that the card is chanting in the middle of the night to summon your next dose of nerdy goodness. 
+Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beaming a new comic into your dashboard from their alien spacecraft. 
 
 ## Installation
 
 Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS your Home Assistant. Click on the the three dots in the upper right. Click "Custom Repository" and paste the url into the url box. Choose "Lovelace" as the category. Download the card files with the "Download" button lower right and voila! You can now add a Calvin Card to your dashboard (you'll find it all the way at the bottom of the card choices behind the + sign.) You probably want to add the following code or similar to make it look good in your setup: 
+
+> [!IMPORTANT]
+> <strong> There are multiple files the install should download into your /config/www/community/calvin-card-ha but users are reporting only calvin-card.js and calvin-card.js.gz are showing up. If this is the case, you'll need to download the following files from this repository and manually install them in that directory: calvin.png, calvin_json.data, and calvin.sh - I'm working to fix this!
+</strong>
+
 
 ```
 grid_options:
@@ -40,21 +45,47 @@ shell_command:
 
 Got to the Settings Menu and choose "Automations and Scenes"
 
-<img src = "https://github.com/Brianfit/images/blob/main/automations%26scenes.jpg">
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/automations%26scenes.jpg">
+</a>
 
 Click on the "Create Automation" button lower right. 
 
+<a href="#">
 <img src="https://github.com/Brianfit/images/blob/main/create.jpg" height="25%" width=25%>
+</a>
 
 Click "Create New Automation"
-
+<a href="#">
 <img src="https://github.com/Brianfit/images/blob/main/new.jpg" height="50%" width="50%">
+</a>
+
+<a href="#">
+<img src="https://github.com/Brianfit/images/blob/main/actionclicks.jpg" height="50%" width="50%">
+</a.
 
 Choose "Time"
 
+<a href="#">
 <img src = "https://github.com/Brianfit/images/blob/main/time.jpg" height="50%" width="50%">
+</a>
 
-And set it up to run `shell_command.run_calvin` once a day at any time you choose.
+And choose a time to run every day, or for example a 12 hour interval. 
+
+Skip the middle bit and click 'Action' 
+
+<a href="#">
+<img src = "https://github.com/Brianfit/images/blob/main/actionpopup.jpg">
+</a>
+
+If you've properly set up your shell commands in configuration.yaml AND restarted HA (you really restarted, didn't just reload the yaml, right?) you should see an autocomplete when you type "shell". In the example above, my configuration.yaml looked like this:
+
+<a href="#">
+<img src = "https://github.com/Brianfit/images/blob/main/multishell.jpg">
+</a>
+
+NB: when you have more than one shell command, they need to be gathered under one header like the above. If you scatter them in your yaml the last one will be the only one loaded. 
+
+Click the plus sign to set it up to run `shell_command.run_calvin`.
 
 
 Every day at the time you specify, a json file and the image calvin.png will be downloaded, to then be fetched by the card using a unique time-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. 
