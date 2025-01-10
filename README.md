@@ -90,8 +90,7 @@ Click the plus sign to add `shell_command.run_calvin` to the action.
 
 
 Every day at the time you specify, a json file and the image calvin.png will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. 
-> [!NOTE]
-> Mouseover the comic to see the alt-text below the image
+
 
 ## Credits
 
