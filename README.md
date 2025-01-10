@@ -59,9 +59,6 @@ Click "Create New Automation"
 <img src="https://github.com/Brianfit/images/blob/main/new.jpg" height="50%" width="50%">
 </a>
 
-<a href="#">
-<img src="https://github.com/Brianfit/images/blob/main/actionclicks.jpg" height="50%" width="50%">
-</a.
 
 Choose "Time"
 
@@ -71,10 +68,14 @@ Choose "Time"
 
 And choose a time to run every day, or for example a 12 hour interval. 
 
-Skip the middle bit and click 'Action' 
+<a href="#">
+<img src="https://github.com/Brianfit/images/blob/main/actionclicks.jpg" height="50%" width="50%">
+</a>
+
+Skip the optional middle bit of "And if" and click 'Add Action' 
 
 <a href="#">
-<img src = "https://github.com/Brianfit/images/blob/main/actionpopup.jpg">
+<img src = "https://github.com/Brianfit/images/blob/main/actionpopup.jpg" height="50%" width="50%">
 </a>
 
 If you've properly set up your shell commands in configuration.yaml AND restarted HA (you really restarted, didn't just reload the yaml, right?) you should see an autocomplete when you type "shell". In the example above, my configuration.yaml looked like this:
@@ -85,10 +86,10 @@ If you've properly set up your shell commands in configuration.yaml AND restarte
 
 NB: when you have more than one shell command, they need to be gathered under one header like the above. If you scatter them in your yaml the last one will be the only one loaded. 
 
-Click the plus sign to set it up to run `shell_command.run_calvin`.
+Click the plus sign to add `shell_command.run_calvin` to the action. 
 
 
-Every day at the time you specify, a json file and the image calvin.png will be downloaded, to then be fetched by the card using a unique time-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. 
+Every day at the time you specify, a json file and the image calvin.png will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. 
 > [!NOTE]
 > Mouseover the comic to see the alt-text below the image
 
