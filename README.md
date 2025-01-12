@@ -13,12 +13,12 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS in your Home Assistant. Click on the the three dots in the upper right. 
 
-<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/threedots.jpg" height="50%" width="50%">
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/threedots.jpg" height="70%" width="70%">
 </a>
 
 Click "Custom Repository" and paste the url into the url box. 
 
-<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%">
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%">
 </a>
 
 Choose "Lovelace" as the category. 
@@ -28,7 +28,7 @@ Choose "Lovelace" as the category.
 
 Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
 
-<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="50%" width="50%"">
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="70%" width="70%">
 </a>
 
 And voila! You can now add a Calvin Card. Go to your dashboard and click the three dots, choose "Edit" and then "Add Card" - the blue button down at bottom right. You'll find a Custom: Calvin card all the way at the bottom of the card choices). 
@@ -86,7 +86,7 @@ Choose "Time"
 And choose a time to run every day, or for example a 12 hour interval. 
 
 <a href="#">
-<img src="https://github.com/Brianfit/images/blob/main/actionclicks.jpg" height="50%" width="50%">
+<img src="https://github.com/Brianfit/images/blob/main/actionclicks.jpg" height="70%" width="70%">
 </a>
 
 Skip the optional middle bit of "And if" and click 'Add Action' 
