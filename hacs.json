@@ -2,5 +2,5 @@
     "name": "calvin-card",
     "render_readme": false,
     "filename": "calvin-card.js",
-    "content_in_root": true
+    "content_in_root": false
 }
