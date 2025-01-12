@@ -1,4 +1,4 @@
-# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:25px!important; width:100px!important;" ></a>
+# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50px" width="200px" ></a>
 
 A HACS routine which pulls a different Calvin and Hobbes comic into your Home Assistant dashboard every day. 
 
@@ -11,12 +11,29 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 ## Installation
 
-Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS your Home Assistant. Click on the the three dots in the upper right. Click "Custom Repository" and paste the url into the url box. Choose "Lovelace" as the category. Download the card files with the "Download" button lower right and voila! You can now add a Calvin Card to your dashboard (you'll find it all the way at the bottom of the card choices behind the + sign.) You probably want to add the following code or similar to make it look good in your setup: 
+Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS in your Home Assistant. Click on the the three dots in the upper right. 
+
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/threedots.jpg" height="50%" width="50%"">
+</a>
+
+Click "Custom Repository" and paste the url into the url box. 
+
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%"">
+</a>
+
+Choose "Lovelace" as the category. 
 
 > [!IMPORTANT]
-> <strong> There are multiple files the install should download into your /config/www/community/calvin-card-ha but users are reporting only calvin-card.js and calvin-card.js.gz are showing up. If this is the case, you'll need to download the following files from this repository and manually install them in that directory: calvin.png, calvin_json.data, and calvin.sh - I'm working to fix this!
-</strong>
+><strong>In a weird Hobbesian mind loop, your HACS integration is now downloaded, but it hasn't yet been downloaded.</strong>  
 
+Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
+
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="50%" width="50%"">
+</a>
+
+And voila! You can now add a Calvin Card. Go to your dashboard and click the three dots, choose "Edit" and then "Add Card" - the blue button down at bottom right. You'll find a Custom: Calvin card all the way at the bottom of the card choices). 
+
+You may want to add the following code or similar to make it look good in your setup: 
 
 ```
 grid_options:
