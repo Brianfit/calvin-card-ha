@@ -18,7 +18,7 @@ Unless and until this card becomes a HACS default and findable within the Home A
 
 Click "Custom Repository" and paste the url into the url box. 
 
-<a href="#"><img src="https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%">
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="70%" width="70%">
 </a>
 
 Choose "Lovelace" as the category. 
@@ -26,7 +26,7 @@ Choose "Lovelace" as the category.
 > [!IMPORTANT]
 ><strong>In a weird Hobbesian mind loop, your HACS integration is now downloaded, but it hasn't yet been downloaded.</strong>  
 
-Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
+Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The Github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
 
 <a href="#"><img src="https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="70%" width="70%">
 </a>
