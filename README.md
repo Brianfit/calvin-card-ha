@@ -1,4 +1,4 @@
-# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50px" width="200px" ></a>
+# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="30px" width="105px" ></a>
 
 A HACS routine which pulls a different Calvin and Hobbes comic into your Home Assistant dashboard every day. 
 
@@ -13,12 +13,12 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS in your Home Assistant. Click on the the three dots in the upper right. 
 
-<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/threedots.jpg" height="50%" width="50%"">
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/threedots.jpg" height="50%" width="50%">
 </a>
 
 Click "Custom Repository" and paste the url into the url box. 
 
-<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%"">
+<a href="#"><img src = "https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="50%" width="50%">
 </a>
 
 Choose "Lovelace" as the category. 
