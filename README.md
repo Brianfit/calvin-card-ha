@@ -1,4 +1,4 @@
-# calvin-card-ha [![hacs\_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Buy Me A Coffee]( "https://github.com/Brianfit/images/blob/main/coffee.jpg")](https://www.buymeacoffee.com/brianfit)
+# calvin-card-ha [![hacs\_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Buy Me A Coffee]("https://github.com/Brianfit/images/blob/main/coffee.jpg")](https://www.buymeacoffee.com/brianfit)
 
 A HACS routine which pulls a different Calvin and Hobbes comic into your Home Assistant dashboard every day.
 
