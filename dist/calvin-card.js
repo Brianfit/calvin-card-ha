@@ -91,7 +91,13 @@ class CALVINcard extends HTMLElement {
     }
 }
 
+if (!customElements.get('calvin-card')) {
+    customElements.define('calvin-card', CALVINcard);
+} else
+{
 customElements.define('calvin-card', CALVINcard);
+};
+
 
 window.customCards = window.customCards || [];
 window.customCards.push({
