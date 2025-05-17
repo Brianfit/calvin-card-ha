@@ -11,7 +11,7 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 ## Installation
 
-[![Open your Home Assistant instance and show the repository in the frontend](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Brianfit&repository=calvin-card-ha=https%3A%2F%2Fgithub.com%2FBrianfit%2Fcalvin-card-ha&category=Lovelace)
+[![Open your Home Assistant instance and show the repository in the frontend](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Brianfit&repository=calvin-card-ha)
 
 
 You may want to add the following code or similar to make it look good in your setup: 
