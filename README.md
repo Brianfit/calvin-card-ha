@@ -1,4 +1,4 @@
-# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 25 px !important;width: 100px !important;" ></a>
+# calvin-card-ha [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) <a href="https://www.buymeacoffee.com/brianfit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:25px !important;width: 100px!important;" ></a>
 
 A HACS routine which pulls a different Calvin and Hobbes comic into your Home Assistant dashboard every day. 
 
@@ -11,7 +11,7 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 ## Installation
 
-[![Open your Home Assistant instance and show the repository in the frontend](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Brianfit&repository=calvin-card-ha)
+[![Open your Home Assistant instance and show the repository in the frontend](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Brianfit&repository=calvin-card-ha=https%3A%2F%2Fgithub.com%2FBrianfit%2Fcalvin-card-ha&category=Lovelace)
 
 
 You may want to add the following code or similar to make it look good in your setup: 
