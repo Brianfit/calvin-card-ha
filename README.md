@@ -11,27 +11,8 @@ Get it? If not, it doesn't matter. Just think of it as Galaxoid and Nebular beam
 
 ## Installation
 
-Unless and until this card becomes a HACS default and findable within the Home Assistand Community Store Search, you'll need to install it as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS in your Home Assistant. Click on the the three dots in the upper right. 
+[![Open your Home Assistant instance and show the repository in the frontend](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Brianfit&repository=calvin-card-ha)
 
-<a href="#"><img src="https://github.com/Brianfit/images/blob/main/threedots.jpg" height="70%" width="70%">
-</a>
-
-Click "Custom Repository" and paste the url into the url box. 
-
-<a href="#"><img src="https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="70%" width="70%">
-</a>
-
-Choose "Lovelace" as the category. 
-
-> [!IMPORTANT]
-><strong>In a weird Hobbesian mind loop, your HACS integration is now downloaded, but it hasn't yet been downloaded.</strong>  
-
-Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The Github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
-
-<a href="#"><img src="https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="70%" width="70%">
-</a>
-
-And voila! You can now add a Calvin Card. Go to your dashboard and click the three dots, choose "Edit" and then "Add Card" - the blue button down at bottom right. You'll find a Custom: Calvin card all the way at the bottom of the card choices). 
 
 You may want to add the following code or similar to make it look good in your setup: 
 
@@ -107,6 +88,31 @@ Click the plus sign to add `shell_command.run_calvin` to the action.
 
 
 Every day at the time you specify, a json file and the image calvin.png will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. 
+
+## Manual installation as a custom card
+If you don't want to use the easy blue button up top to install your card, you can be you and roll your own custom integration: 
+
+If you prefer, you can install it by hand as a custom repository. Right click the "Code" link in the upper left of this page and copy the URL. Go to HACS in your Home Assistant. Click on the the three dots in the upper right. 
+
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/threedots.jpg" height="70%" width="70%">
+</a>
+
+Click "Custom Repository" and paste the url into the url box. 
+
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/urllovelace.jpg" height="70%" width="70%">
+</a>
+
+Choose "Lovelace" as the category. 
+
+> [!IMPORTANT]
+><strong>In a weird Hobbesian mind loop, your HACS integration is now downloaded, but it hasn't yet been downloaded.</strong>  
+
+Refresh your browser as instructed. If you now search HACS for "Calvin" you should see the custom repository among your list of "Downloaded" integrations. Click it. The Github README.md will pop up along with a big, friendly "Download" button with a fluffy tiger tummy that you can tickle. But just click the darn thing.  
+
+<a href="#"><img src="https://github.com/Brianfit/images/blob/main/downloadbutton.jpg" height="70%" width="70%">
+</a>
+
+And voila! You can now add a Calvin Card. Go to your dashboard and click the three dots, choose "Edit" and then "Add Card" - the blue button down at bottom right. You'll find a Custom: Calvin card all the way at the bottom of the card choices). 
 
 
 ## Credits
