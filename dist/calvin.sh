@@ -1,7 +1,5 @@
-#!/bin/bash
-
 SAVE_DIR="/config/www/community/calvin-card-ha/"
-RSS_URL="https://www.comicsrss.com/rss/calvinandhobbes.rss"
+RSS_URL="https://comiccaster.xyz/rss/calvinandhobbes"
 IMAGE_FILE="${SAVE_DIR}calvin.png"
 JSON_FILE="${SAVE_DIR}calvin_data.json"
 SAVE_DIR=$(echo "$SAVE_DIR" | xargs)
@@ -9,18 +7,19 @@ SAVE_DIR=$(echo "$SAVE_DIR" | xargs)
 # Fetch RSS feed
 RSS_DATA=$(curl -s "$RSS_URL")
 
-# Extract components using sed with multiline support
-TITLE=$(echo "$RSS_DATA" | sed -n '/<item/,/<\/item>/p' | sed -n 's/.*<title><!\[CDATA\[\(.*\)\]\]><\/title>.*/\1/p' | head -n1)
-LINK=$(echo "$RSS_DATA" | sed -n '/<item/,/<\/item>/p' | sed -n 's/.*<link>\(.*\)<\/link>.*/\1/p' | head -n1)
-IMAGE_URL=$(echo "$RSS_DATA" | sed -n '/<item/,/<\/item>/p' | sed -n 's/.*<img src="\([^"]*\)".*/\1/p' | head -n1)
+# Extract first <item> block
+ITEM=$(echo "$RSS_DATA" | sed -n '/<item>/,/<\/item>/p' | head -n 20)
+
+# Extract description
+DESCRIPTION=$(echo "$ITEM" | sed -n 's:.*<description>\(.*\)</description>.*:\1:p' | head -n1)
+
+# Extract image URL from <enclosure> tag
+IMAGE_URL=$(echo "$ITEM" | grep -oP '<enclosure[^>]*url="\K[^"]+')
 
 if [ ! -d "$SAVE_DIR" ]; then
     echo "Error: Directory $SAVE_DIR does not exist."
     exit 1
 fi
-
-
-
 
 if [ -z "$IMAGE_URL" ]; then
     echo "Error: No image URL found in RSS feed"
@@ -28,20 +27,19 @@ if [ -z "$IMAGE_URL" ]; then
 fi
 
 # Download image
-
-if ! curl -s "$IMAGE_URL" -o "$SAVE_DIR/calvin.png"; then
+if ! curl -s "$IMAGE_URL" -o "$IMAGE_FILE"; then
     echo "Error: Failed to download image"
     echo "$IMAGE_URL"
     echo "$IMAGE_FILE"
     exit 1
 fi
 
-# Create JSON file. We will force the url to ./calvin.png now to fetch the local image, not the url.
+# Create JSON file
 cat > "$JSON_FILE" << EOF
 {
-  "image_url": "$SAVE_DIR/calvin.png",
-  "title": "$TITLE",
-  "alt_text": "$TITLE"
+  "image_url": "$IMAGE_FILE",
+  "title": "$DESCRIPTION",
+  "alt_text": "$DESCRIPTION"
 }
 EOF
 
