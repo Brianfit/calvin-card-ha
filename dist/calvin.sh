@@ -14,7 +14,7 @@ ITEM=$(echo "$RSS_DATA" | sed -n '/<item>/,/<\/item>/p' | head -n 20)
 DESCRIPTION=$(echo "$ITEM" | sed -n 's:.*<description>\(.*\)</description>.*:\1:p' | head -n1)
 
 # Extract image URL from <enclosure> tag
-IMAGE_URL=$(echo "$ITEM" | grep -oP '<enclosure[^>]*url="\K[^"]+')
+IMAGE_URL=$(echo "$ITEM" | sed -n 's/.*<enclosure[^>]*url="\([^"]*\)".*/\1/p' | head -n1)
 
 if [ ! -d "$SAVE_DIR" ]; then
     echo "Error: Directory $SAVE_DIR does not exist."
