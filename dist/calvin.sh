@@ -10,20 +10,15 @@ RSS_DATA=$(curl -s "$RSS_URL")
 # Extract first <item> block
 ITEM=$(echo "$RSS_DATA" | sed -n '/<item>/,/<\/item>/p' | head -n 20)
 
-# Extract description
+# Extract description and decode HTML entities
 DESCRIPTION=$(echo "$ITEM" | sed -n 's:.*<description>\(.*\)</description>.*:\1:p' | head -n1)
-
-# Extract image URL from <enclosure> tag
-# IMAGE_URL=$(echo "$ITEM" | sed -n 's/.*<enclosure[^>]*url="\([^"]*\)".*/\1/p' | head -n1)
-IMAGE_URL=$(echo "$ITEM" | grep -oP '(?<=<img[^>]*src=")[^"]*' | head -n1)
+# Decode &lt; and &gt; to < and > (works on both BSD and GNU sed)
+DESCRIPTION=$(echo "$DESCRIPTION" | sed 's/&lt;/</g; s/&gt;/>/g')
+# Extract image URL from decoded HTML
+IMAGE_URL=$(echo "$DESCRIPTION" | sed -n 's/.*<img[^>]*src="\([^"]*\)".*/\1/p')
 
 if [ ! -d "$SAVE_DIR" ]; then
     echo "Error: Directory $SAVE_DIR does not exist."
-    exit 1
-fi
-
-if [ -z "$IMAGE_URL" ]; then
-    echo "Error: No image URL found in RSS feed"
     exit 1
 fi
 
