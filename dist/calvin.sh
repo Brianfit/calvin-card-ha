@@ -4,18 +4,21 @@ IMAGE_FILE="${SAVE_DIR}calvin.png"
 JSON_FILE="${SAVE_DIR}calvin_data.json"
 SAVE_DIR=$(echo "$SAVE_DIR" | xargs)
 
-# Fetch RSS feed
 RSS_DATA=$(curl -s "$RSS_URL")
 
-# Extract first <item> block
-ITEM=$(echo "$RSS_DATA" | sed -n '/<item>/,/<\/item>/p' | head -n 20)
+# Strip CDATA wrappers first
+CLEAN=$(echo "$RSS_DATA" | sed 's/<!\[CDATA\[//g; s/\]\]>//g')
 
-# Extract description and decode HTML entities
-DESCRIPTION=$(echo "$ITEM" | sed -n 's:.*<description>\(.*\)</description>.*:\1:p' | head -n1)
-# Decode &lt; and &gt; to < and > (works on both BSD and GNU sed)
-DESCRIPTION=$(echo "$DESCRIPTION" | sed 's/&lt;/</g; s/&gt;/>/g')
-# Extract image URL from decoded HTML
+# Get the first item's description (collapse to single line first)
+DESCRIPTION=$(echo "$CLEAN" | tr -d '\n' | grep -o '<item>.*</item>' | head -c 5000 | sed 's/.*<description>\(.*\)<\/description>.*/\1/')
+
+# Decode HTML entities
+DESCRIPTION=$(echo "$DESCRIPTION" | sed 's/&lt;/</g; s/&gt;/>/g; s/&amp;/\&/g; s/&quot;/"/g')
+
+# Extract image URL
 IMAGE_URL=$(echo "$DESCRIPTION" | sed -n 's/.*<img[^>]*src="\([^"]*\)".*/\1/p')
+
+echo "$IMAGE_URL"
 
 if [ ! -d "$SAVE_DIR" ]; then
     echo "Error: Directory $SAVE_DIR does not exist."
