@@ -73,7 +73,7 @@ NB: when you have more than one shell command, they need to be gathered under on
 
 Click the plus sign to add `shell_command.run_calvin` to the action.
 
-Every day at the time you specify, a JSON file and the image `calvin.png` will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis.
+Every day at the time you specify, a JSON file and the image `calvin.png` will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis. Dashboards that stay open all day (wall tablets, kiosks) check for a fresh comic every 15 minutes, and immediately when a sleeping screen wakes up, so they pick up the new strip soon after your automation runs.
 
 ### Hiding the caption
 

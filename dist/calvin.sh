@@ -63,10 +63,14 @@ fi
 TITLE_JSON=$(printf '%s' "$TITLE_TEXT" | sed 's/\\/\\\\/g; s/"/\\"/g')
 ALT_JSON=$(printf '%s' "$ALT_TEXT" | sed 's/\\/\\\\/g; s/"/\\"/g')
 
+# Timestamp of this download; the card uses it to spot a new comic
+UPDATED=$(date +%s)
+
 # Create JSON file
 cat > "$JSON_FILE" << EOF
 {
   "image_url": "$IMAGE_FILE",
+  "updated": $UPDATED,
   "title": "$TITLE_JSON",
   "alt_text": "$ALT_JSON"
 }
