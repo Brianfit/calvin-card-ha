@@ -75,6 +75,10 @@ Click the plus sign to add `shell_command.run_calvin` to the action.
 
 Every day at the time you specify, a JSON file and the image `calvin.png` will be downloaded, to then be fetched by the card using a unique date-stamped URL, thus foiling the evil image-caching plans of Spaceman Spiff's nemesis.
 
+### Hiding the caption
+
+Short on space? Open `calvin.sh` and change `SHOW_TITLE="true"` to `SHOW_TITLE="false"` to drop the caption under the comic. HACS updates replace `calvin.sh`, so you'll need to re-apply this after updating. (Thanks to [@MrTeamaker](https://github.com/MrTeamaker) for this and the JSON escaping fix.)
+
 ## Manual installation as a custom card
 
 If you don't want to use the easy blue button up top to install your card, you can roll your own custom integration:
